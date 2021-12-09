@@ -5,12 +5,17 @@
             <figcaption class="gallery__text">
                 Не можешь найти комплект по своим размерам?
                 <span class="gallery__socials">
-                    <social-link type="telegram" :href="link.telegram">
+                    <link-button type="telegram" :href="link.telegram">
                         Напиши нам!
-                    </social-link>
-                    <social-link type="viber" :href="link.viber">
+                    </link-button>
+                    <link-button type="viber" :href="link.viber">
                         Сделай заказ!
-                    </social-link>
+                    </link-button>
+                </span>
+                <span class="gallery__phone">
+                    <link-button type="phone" :href="link.phone">
+                        {{formattedPhone}}
+                    </link-button>
                 </span>
             </figcaption>
         </figure>
@@ -19,12 +24,17 @@
             <figcaption class="gallery__text">
                 Поспеши к нам! Их есть у нас! Очень много!
                 <span class="gallery__socials">
-                    <social-link type="telegram" :href="link.telegram">
+                    <link-button type="telegram" :href="link.telegram">
                         Закажешь?
-                    </social-link>
-                    <social-link type="viber" :href="link.viber">
+                    </link-button>
+                    <link-button type="viber" :href="link.viber">
                         Напишешь?
-                    </social-link>
+                    </link-button>
+                </span>
+                <span class="gallery__phone">
+                    <link-button type="phone" :href="link.phone">
+                        {{formattedPhone}}
+                    </link-button>
                 </span>
             </figcaption>
         </figure>
@@ -34,12 +44,17 @@
             <figcaption class="gallery__text">
                 Это твой лучший выбор в жизни. Не пропусти этот шанс!
                 <span class="gallery__socials">
-                    <social-link type="telegram" :href="link.telegram">
+                    <link-button type="telegram" :href="link.telegram">
                         Поторопись!
-                    </social-link>
-                    <social-link type="viber" :href="link.viber">
+                    </link-button>
+                    <link-button type="viber" :href="link.viber">
                         Нажимай!
-                    </social-link>
+                    </link-button>
+                </span>
+                <span class="gallery__phone">
+                    <link-button type="phone" :href="link.phone">
+                        {{formattedPhone}}
+                    </link-button>
                 </span>
             </figcaption>
         </figure>
@@ -48,12 +63,17 @@
             <figcaption class="gallery__text">
                 Заказывай, веселись, спи, наслаждайся, радуйся жизни!
                 <span class="gallery__socials">
-                    <social-link type="telegram" :href="link.telegram">
+                    <link-button type="telegram" :href="link.telegram">
                         Порадуй себя!
-                    </social-link>
-                    <social-link type="viber" :href="link.viber">
+                    </link-button>
+                    <link-button type="viber" :href="link.viber">
                         Жми!
-                    </social-link>
+                    </link-button>
+                </span>
+                <span class="gallery__phone">
+                    <link-button type="phone" :href="link.phone">
+                        {{formattedPhone}}
+                    </link-button>
                 </span>
             </figcaption>
         </figure>
@@ -63,12 +83,13 @@
 <script lang="ts">
     import {Options, Vue} from 'vue-class-component';
     import {CONTACTS} from '@/config/contacts';
-    import SocialLink from '@/components/ui/SocialLink.vue';
+    import {PhoneFormatter} from '@/utils/PhoneFormatter';
+    import LinkButton from '@/components/ui/LinkButton.vue';
     import Banner from '@/components/Banner.vue';
 
     @Options({
         components: {
-            SocialLink,
+            LinkButton,
             Banner,
         },
     })
@@ -76,6 +97,11 @@
         public link = {
             telegram: `https://t.me/${CONTACTS.TELEGRAM}`,
             viber: `viber://chat/?number=${CONTACTS.PHONE}`,
+            phone: `tel:${CONTACTS.PHONE}`,
+        }
+
+        get formattedPhone(): string {
+            return PhoneFormatter.format(CONTACTS.PHONE);
         }
     }
 </script>
@@ -121,6 +147,11 @@
             margin-top: 20px;
         }
 
+        &__phone {
+            display: flex;
+            margin-top: 10px;
+        }
+
         &__banner {
             margin-top: 100px;
             margin-bottom: 100px;
@@ -151,6 +182,10 @@
             &__socials {
                 flex-direction: column;
                 align-items: flex-start;
+            }
+
+            &__phone {
+                margin-top: 15px;
             }
         }
     }

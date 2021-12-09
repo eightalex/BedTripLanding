@@ -1,4 +1,5 @@
-export enum SocialType {
+export enum ButtonType {
     Telegram = 'telegram',
     Viber = 'viber',
+    Phone = 'phone',
 }
