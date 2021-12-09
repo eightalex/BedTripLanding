@@ -12,6 +12,8 @@
 </script>
 
 <style lang="scss" scoped>
+    @use 'sass:math';
+
     .logo {
         position: relative;
         font-family: 'Rock Salt', cursive;
@@ -52,7 +54,7 @@
         $steps: 20;
 
         @for $i from 0 through $steps {
-            #{percentage($i*(1/$steps))} {
+            #{percentage($i * (math.div(1, $steps)))} {
                 clip: rect(random(150)+px, 350px, random(150)+px, 30px);
             }
         }
@@ -62,7 +64,7 @@
         $steps: 20;
 
         @for $i from 0 through $steps {
-            #{percentage($i*(1/$steps))} {
+            #{percentage($i * (math.div(1, $steps)))} {
                 clip: rect(random(150)+px, 350px, random(150)+px, 30px);
             }
         }
