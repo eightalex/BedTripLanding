@@ -1,7 +1,7 @@
 <template>
     <footer class="contacts">
         <container class="contacts__container">
-            <h2 class="contacts__title">А можеш нам написати на пошту:</h2>
+            <h2 class="contacts__title">А можеш написати нам на пошту:</h2>
 <!--            <a :href="`tel:${phone}`" class="contacts__link">{{formattedPhone}}</a>-->
             <a :href="`mailto:${email}`" class="contacts__link">{{email}}</a>
         </container>
