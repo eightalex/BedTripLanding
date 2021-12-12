@@ -65,6 +65,7 @@
         display: flex;
         align-items: flex-start;
         margin: 0;
+        padding: 0 25px;
 
         &.reverse {
             flex-direction: row-reverse;
@@ -100,13 +101,12 @@
         }
 
         @include mq($breakpoint-laptop) {
-            &__item {
-                flex-direction: column-reverse;
-                align-items: center;
+            flex-direction: column-reverse;
+            align-items: center;
+            padding: 0;
 
-                &.reverse {
-                    flex-direction: column-reverse;
-                }
+            &.reverse {
+                flex-direction: column-reverse;
             }
 
             &__text {
