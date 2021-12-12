@@ -1,7 +1,6 @@
 <template>
     <figure class="gallery-item" :class="{reverse}">
-        <slot name="img"/>
-        <img v-if="src" :src="src" class="gallery-item__img" alt="Photo">
+        <img :src="src" class="gallery-item__img" alt="Photo">
         <figcaption class="gallery-item__text">
             <slot/>
             <span class="gallery-item__socials">
@@ -38,7 +37,7 @@
     })
     export default class GalleryItem extends Vue {
         @Prop({type: Boolean}) reverse!: boolean;
-        @Prop({type: String}) src!: string;
+        @Prop({type: String, required: true}) src!: string;
         @Prop({type: String, required: true}) telegram!: string;
         @Prop({type: String, required: true}) viber!: string;
         @Prop({type: String}) phone!: string;
