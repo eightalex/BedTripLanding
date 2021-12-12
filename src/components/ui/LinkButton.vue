@@ -36,6 +36,7 @@
 
 <style lang="scss" scoped>
     @import "../../scss/mixins";
+    @import "../../scss/variables";
 
     .link-button {
         display: inline-flex;
@@ -48,10 +49,6 @@
         border-radius: 3px;
         text-decoration: none;
         cursor: pointer;
-
-        & + & {
-            margin-left: 10px;
-        }
 
         &:hover {
             background-color: rgba(var(--link-color-rgb), 0.2);
@@ -79,15 +76,8 @@
             height: 25px;
         }
 
-        @include mq(1100px) {
+        @include mq($breakpoint-laptop) {
             padding: 6px 20px 6px 10px;
-        }
-
-        @include mq(500px) {
-            & + & {
-                margin-top: 15px;
-                margin-left: 0;
-            }
         }
     }
 </style>

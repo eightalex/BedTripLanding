@@ -16,14 +16,13 @@
 
 <style lang="scss" scoped>
     @import "../scss/mixins";
+    @import "../scss/variables";
 
     .banner {
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 20px;
-        margin-left: auto;
-        margin-right: auto;
         width: 100%;
         height: 335px;
         background-image: url("../assets/banner/1.webp");
@@ -35,18 +34,19 @@
             margin: 0;
             color: var(--background-color);
             font-weight: bold;
-            font-size: var(--text-size-l);
+            font-size: var(--text-size-xl);
+            text-align: center;
         }
 
-        @include mq(1100px) {
+        @include mq($breakpoint-laptop) {
             width: 500px;
             height: 275px;
         }
 
-        @include mq(500px) {
-            min-height: 200px;
-            width: 100%;
-            height: auto;
+        @include mq($breakpoint-mobile-s) {
+            &__title {
+                font-size: var(--text-size-l);
+            }
         }
     }
 </style>

@@ -3,9 +3,7 @@
         <div class="bed-trip__logo">
             <logo animated/>
         </div>
-        <div class="bed-trip__content">
-            <gallery/>
-        </div>
+        <gallery/>
         <contacts/>
     </div>
 </template>
@@ -35,12 +33,6 @@
             display: flex;
             justify-content: center;
             margin: 50px 0 70px;
-        }
-
-        &__content {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
         }
     }
 </style>
