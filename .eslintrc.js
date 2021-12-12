@@ -14,22 +14,22 @@ module.exports = {
     rules: {
         'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
         'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-        'indent': 'off',
+        indent: 'off',
         'indent-legacy': 'error',
         'vue/script-indent': ['error', 4, {
-            'baseIndent': 1,
-            'switchCase': 1,
+            baseIndent: 1,
+            switchCase: 1,
         }],
         'object-curly-spacing': ['error', 'never'],
         '@typescript-eslint/no-unused-vars': ['error', {
-            'argsIgnorePattern': '^_',
-            'varsIgnorePattern': '^_$',
+            argsIgnorePattern: '^_',
+            varsIgnorePattern: '^_$',
         }],
         'class-methods-use-this': 'off',
         'import/prefer-default-export': 'off',
         'no-shadow': 'off',
         'lines-between-class-members': ['error', 'always', {
-            'exceptAfterSingleLine': true,
+            exceptAfterSingleLine: true,
         }],
     },
     overrides: [

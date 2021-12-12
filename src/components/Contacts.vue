@@ -1,8 +1,8 @@
 <template>
     <footer class="contacts">
-        <container>
-            <h2 class="contacts__title">А можешь написать письмо или позвонить:</h2>
-            <a :href="`tel:${phone}`" class="contacts__link">{{formattedPhone}}</a>
+        <container class="contacts__container">
+            <h2 class="contacts__title">А можеш нам написати на пошту:</h2>
+<!--            <a :href="`tel:${phone}`" class="contacts__link">{{formattedPhone}}</a>-->
             <a :href="`mailto:${email}`" class="contacts__link">{{email}}</a>
         </container>
     </footer>
@@ -34,12 +34,15 @@
     @import "../scss/variables";
 
     .contacts {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         margin-top: 70px;
         padding: 40px 40px 100px;
-        text-align: center;
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
 
         &__title {
             margin: 0;
