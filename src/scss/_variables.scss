@@ -20,3 +20,8 @@ $breakpoint-laptop: 1024px;
     --viber-color: #665cac;
     --viber-color-rgb: 102, 92, 172;
 }
+
+[data-theme="dark"] {
+    --text-color: #d3cfc9;
+    --background-color: #181a1b;
+}

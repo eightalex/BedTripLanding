@@ -21,7 +21,18 @@
             Contacts,
         },
     })
-    export default class App extends Vue {}
+    export default class App extends Vue {
+        created(): void {
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                const theme = e.matches ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', theme);
+            });
+        }
+    }
 </script>
 
 <style lang="scss">
