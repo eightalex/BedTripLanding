@@ -32,7 +32,7 @@
 
         &__title {
             margin: 0;
-            color: var(--background-color);
+            color: #fff;
             font-weight: bold;
             font-size: var(--text-size-xl);
             text-align: center;
