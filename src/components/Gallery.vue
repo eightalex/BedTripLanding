@@ -69,7 +69,7 @@
                 :viber="link.viber"
             >
                 Солоденьких снів
-                <template #clothTitle>На приємному ліжечку:</template>
+                <template #clothTitle>На приємному ліжку:</template>
                 <template #cloth>Ніжний какао</template>
                 <template #telegram>Наш телеграм</template>
                 <template #viber>Та вайбер</template>
