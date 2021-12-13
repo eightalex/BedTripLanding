@@ -3,44 +3,74 @@
         <container>
             <gallery-item
                 src="img/gallery/1.webp"
+                src-cloth="img/gallery/1_cloth.webp"
+                cloth-type="grey"
                 class="gallery__item"
                 :telegram="link.telegram"
                 :viber="link.viber"
             >
                 Постільна білизна за вашими розмірами
+                <template #clothTitle>А може це твій колір?</template>
+                <template #cloth>Несамовито сірий</template>
                 <template #telegram>Пиши нам сюди</template>
                 <template #viber>Чи сюди</template>
             </gallery-item>
             <gallery-item
                 src="img/gallery/2.webp"
+                src-cloth="img/gallery/2_cloth.webp"
+                cloth-type="brown"
                 class="gallery__item"
                 :telegram="link.telegram"
                 :viber="link.viber"
                 reverse
             >
                 Високоякісний сатин
+                <template #clothTitle>Як тобі такий?</template>
+                <template #cloth>Густий кавовий</template>
                 <template #telegram>Тисни сюди</template>
                 <template #viber>Чи сюди</template>
             </gallery-item>
             <banner class="gallery__banner">Це може бути твоє ліжечко</banner>
             <gallery-item
                 src="img/gallery/3.webp"
+                src-cloth="img/gallery/3_cloth.webp"
+                cloth-type="pink"
                 class="gallery__item"
                 :telegram="link.telegram"
                 :viber="link.viber"
             >
                 Доречі, сатин і прохолодний і м'якенький
+                <template #clothTitle>І дуже красивий:</template>
+                <template #cloth>Дивовижний рожевий</template>
                 <template #telegram>Можна писати сюди</template>
                 <template #viber>Або сюди</template>
             </gallery-item>
             <gallery-item
                 src="img/gallery/4.webp"
+                src-cloth="img/gallery/4_cloth.webp"
+                cloth-type="blue"
                 class="gallery__item"
                 :telegram="link.telegram"
                 :viber="link.viber"
                 reverse
             >
+                Баунті — це дурниця. Наша постіль — ось справжня насолода!
+                <template #clothTitle>Твій колір для справжньої насолоди:</template>
+                <template #cloth>Глибокий синій</template>
+                <template #telegram>Наш телеграм</template>
+                <template #viber>Та вайбер</template>
+            </gallery-item>
+            <gallery-item
+                src="img/gallery/5.webp"
+                src-cloth="img/gallery/5_cloth.webp"
+                cloth-type="lightbrown"
+                class="gallery__item"
+                :telegram="link.telegram"
+                :viber="link.viber"
+            >
                 Солоденьких снів
+                <template #clothTitle>На приємному ліжечку:</template>
+                <template #cloth>Ніжний какао</template>
                 <template #telegram>Наш телеграм</template>
                 <template #viber>Та вайбер</template>
             </gallery-item>

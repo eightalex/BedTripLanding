@@ -1,8 +1,16 @@
 <template>
     <figure class="gallery-item" :class="{reverse}">
         <img :src="src" class="gallery-item__img" alt="Photo">
-        <figcaption class="gallery-item__text">
-            <slot/>
+        <figcaption class="gallery-item__content">
+            <span class="gallery-item__text">
+                <slot/>
+            </span>
+            <gallery-cloth :src="srcCloth" :type="clothType" class="gallery-item__cloth">
+                <template #title>
+                    <slot name="clothTitle"></slot>
+                </template>
+                <slot name="cloth"/>
+            </gallery-cloth>
             <span class="gallery-item__socials">
                 <link-button class="gallery-item__link-button"
                              type="telegram"
@@ -28,16 +36,20 @@
     import {Options, Vue} from 'vue-class-component';
     import {Prop} from 'vue-property-decorator';
     import {PhoneFormatter} from '@/utils/PhoneFormatter';
+    import GalleryCloth from '@/components/GalleryCloth.vue';
     import LinkButton from '@/components/ui/LinkButton.vue';
 
     @Options({
         components: {
             LinkButton,
+            GalleryCloth,
         },
     })
     export default class GalleryItem extends Vue {
         @Prop({type: Boolean}) reverse!: boolean;
         @Prop({type: String, required: true}) src!: string;
+        @Prop({type: String, required: true}) srcCloth!: string;
+        @Prop({type: String, required: true}) clothType!: string;
         @Prop({type: String, required: true}) telegram!: string;
         @Prop({type: String, required: true}) viber!: string;
         @Prop({type: String}) phone!: string;
@@ -75,17 +87,24 @@
             max-width: $img-width;
         }
 
-        &__text {
+        &__content {
             margin-top: 70px;
             padding: 20px 25px;
+            width: 400px;
+        }
+
+        &__text {
             font-size: var(--text-size-xl);
             font-weight: bold;
-            width: 400px;
+        }
+
+        &__cloth {
+            margin-top: 30px;
         }
 
         &__socials {
             display: flex;
-            margin-top: 20px;
+            margin-top: 30px;
         }
 
         &__phone {
@@ -108,7 +127,7 @@
                 flex-direction: column-reverse;
             }
 
-            &__text {
+            &__content {
                 margin-top: 0;
                 width: 100%;
                 max-width: $img-width;
