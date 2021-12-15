@@ -30,7 +30,7 @@
                 <template #telegram>Тисни сюди</template>
                 <template #viber>Чи сюди</template>
             </gallery-item>
-            <banner class="gallery__banner">Це може бути твоє ліжечко</banner>
+            <banner class="gallery__banner">Це може бути твоє ліжко</banner>
             <gallery-item
                 src="img/gallery/3.webp"
                 src-cloth="img/gallery/3_cloth.webp"
@@ -68,8 +68,8 @@
                 :telegram="link.telegram"
                 :viber="link.viber"
             >
-                Солоденьких снів
-                <template #clothTitle>На приємному ліжку:</template>
+                Солодких снів
+                <template #clothTitle>На твоєму приємному ліжку:</template>
                 <template #cloth>Ніжний какао</template>
                 <template #telegram>Наш телеграм</template>
                 <template #viber>Та вайбер</template>
