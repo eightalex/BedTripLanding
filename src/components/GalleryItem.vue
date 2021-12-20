@@ -1,6 +1,6 @@
 <template>
     <figure class="gallery-item" :class="{reverse}">
-        <img :src="src" class="gallery-item__img" alt="Photo">
+        <img :src="src" class="gallery-item__img" :alt="alt">
         <figcaption class="gallery-item__content">
             <span class="gallery-item__text">
                 <slot/>
@@ -48,6 +48,7 @@
     export default class GalleryItem extends Vue {
         @Prop({type: Boolean}) reverse!: boolean;
         @Prop({type: String, required: true}) src!: string;
+        @Prop({type: String, required: true}) alt!: string;
         @Prop({type: String, required: true}) srcCloth!: string;
         @Prop({type: String, required: true}) clothType!: string;
         @Prop({type: String, required: true}) telegram!: string;

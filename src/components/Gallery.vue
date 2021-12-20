@@ -3,6 +3,7 @@
         <container>
             <gallery-item
                 src="img/gallery/1.webp"
+                alt="Постіль під замовлення з сатину сірого кольору (однотонний)"
                 src-cloth="img/gallery/1_cloth.webp"
                 cloth-type="grey"
                 class="gallery__item"
@@ -20,6 +21,8 @@
                 src-cloth="img/gallery/2_cloth.webp"
                 cloth-type="brown"
                 class="gallery__item"
+                :alt="'Пошити постіль на замовлення за вашими розмірами у Києві (Сімейний).' +
+                'Колір Какао, однотонний'"
                 :telegram="link.telegram"
                 :viber="link.viber"
                 reverse
@@ -36,6 +39,8 @@
                 src-cloth="img/gallery/3_cloth.webp"
                 cloth-type="pink"
                 class="gallery__item"
+                :alt="'Пошив постільної білизни на замовлення (Півтораспальний).' +
+                'Колір: Рожевий, однотонний'"
                 :telegram="link.telegram"
                 :viber="link.viber"
             >
@@ -50,6 +55,8 @@
                 src-cloth="img/gallery/4_cloth.webp"
                 cloth-type="blue"
                 class="gallery__item"
+                :alt="'Пошив постільної білизни на замовлення з резинкою (Двоспальний).' +
+                'Колір: синій, однотонний'"
                 :telegram="link.telegram"
                 :viber="link.viber"
                 reverse
@@ -65,6 +72,8 @@
                 src-cloth="img/gallery/5_cloth.webp"
                 cloth-type="lightbrown"
                 class="gallery__item"
+                :alt="'Купити комплект постільної білизни з сатину (Євро).' +
+                'Колір: Ніжний какао, однотонний'"
                 :telegram="link.telegram"
                 :viber="link.viber"
             >
