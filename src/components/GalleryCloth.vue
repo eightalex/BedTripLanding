@@ -33,31 +33,31 @@
 
         &.grey {
             .gallery-cloth__text {
-                color: #b1a595;
+                color: #9ca0a6;
             }
         }
 
         &.brown {
             .gallery-cloth__text {
-                color: #7b5537;
+                color: #6f584c;
             }
         }
 
         &.pink {
             .gallery-cloth__text {
-                color: #dea981;
+                color: #a98d8e;
             }
         }
 
         &.blue {
             .gallery-cloth__text {
-                color: #4b5062;
+                color: #31478e;
             }
         }
 
         &.lightbrown {
             .gallery-cloth__text {
-                color: #a98668;
+                color: #a79a94;
             }
         }
 
@@ -70,6 +70,8 @@
         &__img {
             width: 100%;
             max-width: $img-width;
+            max-height: $img-width;
+            object-fit: cover;
         }
 
         &__text {

@@ -2,9 +2,9 @@
     <article class="gallery">
         <container>
             <gallery-item
-                src="img/gallery/1.webp"
+                src="img/gallery/jpg/1.jpg"
                 alt="Постіль під замовлення з сатину сірого кольору (однотонний)"
-                src-cloth="img/gallery/1_cloth.webp"
+                src-cloth="img/gallery/jpg/1_cloth.jpg"
                 cloth-type="grey"
                 class="gallery__item"
                 :telegram="link.telegram"
@@ -17,8 +17,8 @@
                 <template #viber>Чи сюди</template>
             </gallery-item>
             <gallery-item
-                src="img/gallery/2.webp"
-                src-cloth="img/gallery/2_cloth.webp"
+                src="img/gallery/jpg/2.jpg"
+                src-cloth="img/gallery/jpg/2_cloth.jpg"
                 cloth-type="brown"
                 class="gallery__item"
                 :alt="'Пошити постіль на замовлення за вашими розмірами у Києві (Сімейний).' +
@@ -29,14 +29,13 @@
             >
                 Високоякісний сатин
                 <template #clothTitle>Як тобі такий?</template>
-                <template #cloth>Густий кавовий</template>
+                <template #cloth>Смачне какао</template>
                 <template #telegram>Тисни сюди</template>
                 <template #viber>Чи сюди</template>
             </gallery-item>
-            <banner class="gallery__banner">Це може бути твоє ліжко</banner>
             <gallery-item
-                src="img/gallery/3.webp"
-                src-cloth="img/gallery/3_cloth.webp"
+                src="img/gallery/jpg/3.jpg"
+                src-cloth="img/gallery/jpg/3_cloth.jpg"
                 cloth-type="pink"
                 class="gallery__item"
                 :alt="'Пошив постільної білизни на замовлення (Півтораспальний).' +
@@ -51,8 +50,8 @@
                 <template #viber>Або сюди</template>
             </gallery-item>
             <gallery-item
-                src="img/gallery/4.webp"
-                src-cloth="img/gallery/4_cloth.webp"
+                src="img/gallery/jpg/4.jpg"
+                src-cloth="img/gallery/jpg/4_cloth.jpg"
                 cloth-type="blue"
                 class="gallery__item"
                 :alt="'Пошив постільної білизни на замовлення з резинкою (Двоспальний).' +
@@ -68,18 +67,18 @@
                 <template #viber>Та вайбер</template>
             </gallery-item>
             <gallery-item
-                src="img/gallery/5.webp"
-                src-cloth="img/gallery/5_cloth.webp"
+                src="img/gallery/jpg/5.jpg"
+                src-cloth="img/gallery/jpg/5_cloth.jpg"
                 cloth-type="lightbrown"
                 class="gallery__item"
                 :alt="'Купити комплект постільної білизни з сатину (Євро).' +
-                'Колір: Ніжний какао, однотонний'"
+                'Колір: Ніжний пудровий, однотонний'"
                 :telegram="link.telegram"
                 :viber="link.viber"
             >
                 Солодких снів
                 <template #clothTitle>На твоєму приємному ліжку:</template>
-                <template #cloth>Ніжний какао</template>
+                <template #cloth>Ніжний пудровий</template>
                 <template #telegram>Наш телеграм</template>
                 <template #viber>Та вайбер</template>
             </gallery-item>
