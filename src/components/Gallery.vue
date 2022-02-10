@@ -60,8 +60,8 @@
                 :viber="link.viber"
                 reverse
             >
-                Баунті — це дурниця. Наша постіль — ось справжня насолода!
-                <template #clothTitle>Твій колір для справжньої насолоди:</template>
+                Приємний на дотик
+                <template #clothTitle>І виглядає гарно:</template>
                 <template #cloth>Глибокий синій</template>
                 <template #telegram>Наш телеграм</template>
                 <template #viber>Та вайбер</template>
