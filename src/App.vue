@@ -5,6 +5,7 @@
         </div>
         <gallery/>
         <contacts/>
+        <bot-content v-show="isBot"/>
     </div>
 </template>
 
@@ -13,15 +14,22 @@
     import Logo from '@/components/Logo.vue';
     import Gallery from '@/components/Gallery.vue';
     import Contacts from '@/components/Contacts.vue';
+    import BotContent from '@/components/BotContent.vue';
+    import {UserAgent} from '@/utils/UserAgent';
 
     @Options({
         components: {
             Logo,
             Gallery,
             Contacts,
+            BotContent,
         },
     })
     export default class App extends Vue {
+        get isBot(): boolean {
+            return UserAgent.checkIsBot();
+        }
+
         created(): void {
             if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
                 document.documentElement.setAttribute('data-theme', 'dark');
