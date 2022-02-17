@@ -16,6 +16,7 @@
     import Contacts from '@/components/Contacts.vue';
     import BotContent from '@/components/BotContent.vue';
     import {UserAgent} from '@/utils/UserAgent';
+    import {THEME} from '@/constants/theme';
 
     @Options({
         components: {
@@ -31,13 +32,16 @@
         }
 
         created(): void {
-            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                document.documentElement.setAttribute('data-theme', 'dark');
+            const query = '(prefers-color-scheme: dark)';
+            const attribute = 'data-theme';
+
+            if (window.matchMedia(query).matches) {
+                document.documentElement.setAttribute(attribute, THEME.DARK);
             }
 
-            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-                const theme = e.matches ? 'dark' : 'light';
-                document.documentElement.setAttribute('data-theme', theme);
+            window.matchMedia(query).addEventListener('change', (e) => {
+                const theme = e.matches ? THEME.DARK : THEME.LIGHT;
+                document.documentElement.setAttribute(attribute, theme);
             });
         }
     }
