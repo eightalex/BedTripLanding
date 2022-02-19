@@ -3,6 +3,12 @@
  */
 module.exports = {
     productionSourceMap: false,
+    css: {
+        extract: {
+            filename: 'css/[name].css?_hash=[contenthash:8]',
+            chunkFilename: 'css/[name].css?_hash=[contenthash:8]',
+        },
+    },
     chainWebpack: (config) => {
         if (process.env.NODE_ENV === 'production') {
             config
