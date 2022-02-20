@@ -3,6 +3,9 @@
         <div class="bed-trip__logo">
             <logo animated/>
         </div>
+        <div class="bed-trip__scheme-switcher">
+            <scheme-switcher/>
+        </div>
         <gallery/>
         <contacts/>
         <bot-content v-show="isBot"/>
@@ -15,8 +18,8 @@
     import Gallery from '@/components/Gallery.vue';
     import Contacts from '@/components/Contacts.vue';
     import BotContent from '@/components/BotContent.vue';
+    import SchemeSwitcher from '@/components/ui/SchemeSwitcher.vue';
     import {UserAgent} from '@/utils/UserAgent';
-    import {THEME} from '@/constants/theme';
 
     @Options({
         components: {
@@ -24,25 +27,12 @@
             Gallery,
             Contacts,
             BotContent,
+            SchemeSwitcher,
         },
     })
     export default class App extends Vue {
         get isBot(): boolean {
             return UserAgent.checkIsBot();
-        }
-
-        created(): void {
-            const query = '(prefers-color-scheme: dark)';
-            const attribute = 'data-theme';
-
-            if (window.matchMedia(query).matches) {
-                document.documentElement.setAttribute(attribute, THEME.DARK);
-            }
-
-            window.matchMedia(query).addEventListener('change', (e) => {
-                const theme = e.matches ? THEME.DARK : THEME.LIGHT;
-                document.documentElement.setAttribute(attribute, theme);
-            });
         }
     }
 </script>
@@ -55,7 +45,13 @@
         &__logo {
             display: flex;
             justify-content: center;
-            margin: 50px 0 70px;
+            margin: 50px 0 50px;
+        }
+
+        &__scheme-switcher {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 70px;
         }
     }
 </style>

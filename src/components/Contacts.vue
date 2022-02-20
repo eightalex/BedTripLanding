@@ -10,7 +10,7 @@
 
 <script lang="ts">
     import {Options, Vue} from 'vue-class-component';
-    import {CONTACTS} from '@/config/contacts';
+    import {CONTACTS} from '@/constants/contacts';
     import {PhoneFormatter} from '@/utils/PhoneFormatter';
     import Container from '@/components/layout/Container.vue';
 
